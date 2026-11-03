@@ -18,7 +18,7 @@ Pick the project that matches your time slot.
 - [010-residency-and-audit/](010-residency-and-audit/README.md): One data residency rule reaches a dozen places, then the AI audits its own work.
 - [020-escalating-changes/](020-escalating-changes/README.md): A new channel, a residency rule, and a vendor swap, in growing size.
 - [030-quick-new-channel/](030-quick-new-channel/README.md): One new sales channel and its payments, in ten minutes.
-- [040-lightweight-coffee-orders/](040-lightweight-coffee-orders/README.md): Two short documents and two small diagrams; executives ask questions, then mobile pre-orders appear outlined in green, in six minutes.
+- [040-lightweight-coffee-orders/](040-lightweight-coffee-orders/README.md): Two short documents and two small Mermaid diagrams; executives ask questions, then mobile pre-orders appear outlined in green, in six minutes.
 
 ## How the projects relate
 
@@ -42,7 +42,7 @@ An independent AI session with no other context ran each project's prompts again
 | [030 Quick New Channel](030-quick-new-channel/README.md)                 | About 90 seconds            | All places in the answer key updated, with `TBD` for unknowns                                                                                                                                  |
 | [010 Residency and Audit](010-residency-and-audit/README.md)             | About 5 minutes             | Rule applied across all files, ADR-002 superseded, and the audit found 17 further gaps                                                                                                         |
 | [020 Escalating Changes](020-escalating-changes/README.md)               | About 5 minutes             | Three changes applied in order, with a final audit that found real leftovers                                                                                                                   |
-| [040 Lightweight Coffee Orders](040-lightweight-coffee-orders/README.md) | About 1 minute, small model | Both diagrams compiled and the green highlights marked every change, in three candidate scenarios. Five executive questions were answered correctly, including one the documents cannot answer |
+| [040 Lightweight Coffee Orders](040-lightweight-coffee-orders/README.md) | About 1 minute, small model | Both Mermaid diagrams compiled and the green highlights marked every change, and the highlights came off cleanly. Five executive questions were answered correctly, including one the documents cannot answer |
 
 - **What the rehearsal changed:**
   - A `Status:` line on every decision record.

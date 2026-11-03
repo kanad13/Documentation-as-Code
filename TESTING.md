@@ -33,4 +33,5 @@ A single run is evidence for that run only. Repeat with a different model when a
 
 - **Diagram structure rules:** The rules in `AGENTS.md` (one idea per diagram, connected, at most ten Mermaid nodes) have no automated check here. Review them by hand.
 - **Demo behavior:** The rehearsal is manual, and its results depend on the model.
+- **The slide 9 image:** Nothing checks that `education/images/d2-architecture-example.png` still matches the D2 block in the 010 architecture page. Re-render it by hand when that block changes.
 - **Frozen props:** The Word files and PNGs in each `before/` folder are not checked, by design.
