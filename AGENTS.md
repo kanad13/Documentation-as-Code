@@ -16,7 +16,7 @@ The repository teaches non-technical readers why and how to keep documentation a
 
 - **Diagrams:**
   - Write documentation diagrams as text: use fenced `mermaid` blocks for flows, sequences, timelines, and states, and fenced `d2` blocks for complex architecture.
-  - Visual assets, screenshots, and demonstration props may be committed alongside documentation.
+  - Visual assets, screenshots, and demonstration props may be committed alongside documentation. A rendered image never replaces its text recipe.
 - **Diagram setup:**
   - Start every `d2` block with the standard `vars` header that selects the TALA layout. Copy it from an existing block.
   - Start every Mermaid flowchart with the theme `classDef` lines, and give every node a class. Copy them from an existing diagram.
@@ -67,7 +67,7 @@ Mermaid renders with `mmdc` (Mermaid CLI) when installed. D2 renders through a s
 printf 'client -> server: Hello\n' | curl -X POST --data-binary @- "$D2_RENDERER_URL/d2/svg" -o diagram.svg
 ```
 
-Write rendered output to a temporary location, not into the repository.
+Write rendered output to a temporary location, not into the repository. The one exception is `education/images/`, which holds the rendered example for crash-course slide 9. Re-render it when its source D2 block changes. To convert the SVG to PNG, use `rsvg-convert -w 2000 -b white in.svg -o out.png`.
 
 ## Demo behavior
 
@@ -77,7 +77,7 @@ Write rendered output to a temporary location, not into the repository.
 - **Keeping projects in step:**
   - The three Northwind projects (010, 020, 030) share the same starting documents.
   - Apply any base document change to all three `project/docs/` folders.
-  - The lightweight project (040) has its own small documents.
+  - The lightweight project (040) has its own small documents and uses Mermaid only.
 - **What the demos prescribe:**
   - Each demo says what to change and which prompts to use.
   - No demo says how to preview diagrams or which tools to install.

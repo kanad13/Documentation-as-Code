@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Checks that every relative Markdown link resolves and every diagram renders.
+"""Checks that every relative Markdown link and image resolves and every diagram renders.
 
 Why it exists: this repository argues that documentation should be verified like
 code, so the same standard applies to its own pages. Mermaid renders locally with
@@ -20,8 +20,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 D2_URL = os.environ.get("D2_RENDERER_URL", "").rstrip("/")
 FENCE = re.compile(r"^```(\w+)[^\n]*\n(.*?)^```", re.S | re.M)
-# The lookbehind skips image syntax: this repository stores no images, so only page links are checked.
-LINK = re.compile(r"(?<!!)\[[^\]]*\]\(([^)\s]+)\)")
+# Matches page links and image links alike, so a missing image file is caught too.
+LINK = re.compile(r"\[[^\]]*\]\(([^)\s]+)\)")
 
 
 def markdown_files():

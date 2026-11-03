@@ -4,7 +4,7 @@ Sixteen diagrams, about eight minutes, that take a non-technical audience from "
 
 ## About the diagram titles
 
-Each diagram carries a `title:` block inside its code, matching the caption above it. A title is shortened only where a long one would be cut off, as in the sequence diagram. A presenter who copies only the diagram into a slide keeps its title. This is a deliberate exception to the usual rule that the caption alone titles a diagram.
+Each diagram carries a `title:` block inside its code, matching the caption above it. A title is shortened only where a long one would be cut off, as in the sequence diagram. The rendered image on slide 9 is a picture of a recipe, so its caption is its title. A presenter who copies only the diagram into a slide keeps its title. This is a deliberate exception to the usual rule that the caption alone titles a diagram.
 
 ## Who this is for
 
@@ -272,6 +272,12 @@ flowchart LR
     class r c3
     class p c1
 ```
+
+The same idea at scale: the 89 lines of D2 text in the [010 architecture page](../demo/010-residency-and-audit/project/docs/020-architecture.md) draw the diagram below. The image is a rendered copy. The text stays the source, so changing one line redraws it.
+
+**Diagram: A page of D2 text draws a full architecture with nested groups, data stores and labeled flows**
+
+![A rendered D2 architecture diagram of a sales platform: sales and settlement sources feed an integration platform, a cloud warehouse with four data zones, dashboards and users](images/d2-architecture-example.png)
 
 ### 10. Git makes change trustworthy
 

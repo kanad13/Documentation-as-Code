@@ -52,6 +52,6 @@ An independent AI session with no other context ran each project's prompts again
 - **What it did not cover:**
   - The sessions were Claude subagents (the lightweight demo used the small Haiku model), so timing and behavior may differ in the tool you present with.
   - The fixes above and the final `project/` layout were applied after the rehearsal and have not been run again.
-  - The D2 diagrams it produced were compiled afterwards, not by the session itself.
+  - The D2 diagrams in projects 010 to 030 were compiled afterwards, not by the session itself.
 
 **Navigation:** [Repository home](../README.md)

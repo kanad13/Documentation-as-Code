@@ -12,11 +12,11 @@ git switch -c demo-run
 ```
 
 3. Open your AI tool in the [project/](project/README.md) folder. If it does not read [AGENTS.md](project/AGENTS.md) on its own, start with: "Read AGENTS.md and follow it."
-4. Have a previewer ready that shows Mermaid and D2 diagrams, so you can show the pictures after the change. Use whichever previewer you already have.
+4. Have a previewer ready that shows Mermaid diagrams, so you can show the pictures after the change. GitHub shows them in the browser, and most editors have a Mermaid preview. Use whichever you already have.
 
 ## Act 1: The starting point (30 seconds)
 
-- Show the two diagrams: the customer's journey (Mermaid) and the parts and how they connect (D2).
+- Show the two diagrams: the customer's journey and the parts and how they connect.
 - Say: "Both of these are text. There is no picture file behind them."
 
 ## Act 2: Ask (2 minutes)
@@ -66,9 +66,9 @@ Bramble Coffee is adding mobile pre-orders. Customers order and pay in a mobile 
 
 - **Show, in this order:**
   - The AI's summary.
-  - Your previewer, refreshed: new boxes and edges outlined in green in both diagrams.
+  - Your previewer, refreshed: new boxes and arrows outlined in green in both diagrams.
   - `git diff --stat`.
-- **Point out:** The text, the Mermaid diagram, and the D2 diagram all changed from one sentence.
+- **Point out:** The text and both diagrams changed from one sentence.
 
 ## Act 4: Clean up (30 seconds)
 
@@ -103,20 +103,20 @@ git add -A && git commit -m "Add mobile pre-orders"
 | File | Where                                                                                            |
 | :--- | :----------------------------------------------------------------------------------------------- |
 | 010  | The intro, the customer journey diagram (an app path), and the snapshot or risks                 |
-| 020  | The intro, the D2 diagram (a mobile app and a pickup shelf), the components table, and the rules |
+| 020  | The intro, the components diagram (a mobile app and a pickup shelf), the components table, and the rules |
 
 ## Rehearsal notes
 
-An independent run with a small, fast AI model (Haiku) and no other context handled every prompt in this guide. Expect similar results.
+A second independent run with a small, fast AI model (Haiku) and no other context handled every prompt in this guide on the Mermaid-only version. Expect similar results.
 
 - **Time:** About one minute of AI work for the change.
 - **What it did:**
-  - Updated both documents and both diagrams, and marked new or changed shapes in green.
-  - Kept the D2 setup block unchanged, and both diagrams compiled.
-  - Wrote `TBD` for what it could not know, such as who moves app orders to the shelf.
-- **The questions:** All five were answered correctly with the file named. For the coffee-bean question the model said the documents do not give a figure, and it did not invent one.
-- **The cleanup:** The model removed the highlights without disturbing anything else. If your model leaves a highlight behind, ask once more.
-- **A good line:** The AI wrote `TBD` for details the owner never gave, such as who moves app orders to the shelf. That gap is what the human review is for.
+  - Updated both documents and both diagrams, and marked new or changed nodes with the `changed` class.
+  - Kept the `classDef` setup, and both diagrams compiled.
+  - Wrote `TBD` for what it could not know: the app's payment provider, the wait for app orders, and who moves app orders to the shelf.
+- **The questions:** All five were answered correctly with the file named. For the coffee-bean question the model answered `TBD` and did not invent a figure.
+- **The cleanup:** The model removed the highlights without changing any text. It gave each formerly highlighted node the color of its role, because the rules require every node to keep a class. If your model leaves a highlight behind, ask once more.
+- **A good line:** The `TBD` entries are the gaps the owner never filled. That gap is what the human review is for.
 
 ## Pair it with the crash course
 

@@ -78,6 +78,7 @@ flowchart LR
 - [040-the-payoff.md](040-the-payoff.md): Ask, draw, update, and the company AI brain.
 - [050-adopting-it.md](050-adopting-it.md): The five rules, a four-phase roadmap, and what to do this week.
 - [060-glossary.md](060-glossary.md): Plain-language meanings of every technical term used.
+- [images/](images/d2-architecture-example.png): The rendered D2 architecture image shown on crash-course slide 9.
 
 **Diagram: The folder index points to seven pages in reading order**
 
@@ -151,7 +152,7 @@ flowchart LR
 - **Diagrams:**
   - Mermaid shows flows, sequences, timelines, and states.
   - D2 shows complex architecture.
-  - Both live as text in the page, never as images.
+  - Both live as text in the page. The one image, on crash-course slide 9, is a rendered copy of a D2 diagram, and its text recipe stays the source.
 - **Terms:**
   - Every technical term is explained at first use.
   - An analogy accompanies the term where one fits.

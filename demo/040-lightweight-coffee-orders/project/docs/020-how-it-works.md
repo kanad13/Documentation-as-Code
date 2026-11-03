@@ -4,29 +4,24 @@ The cashier enters the order on the counter screen and takes payment. The order 
 
 ## Components
 
-```d2
-vars: {
-  d2-config: {
-    layout-engine: tala
-    pad: 24
-    theme-id: 0
-    dark-theme-id: 200
-  }
-}
+**Diagram: The customer orders at the counter and pays at the card reader, and the barista screen shows the order**
 
-direction: right
-
-customer: Customer {shape: person}
-counter: Counter screen
-reader: Card reader {
-  shape: cloud
-  style.stroke-dash: 4
-}
-barista: Barista screen
-customer -> counter: orders
-customer -> reader: pays
-counter -> barista: sends order
-barista -> customer: calls name at pickup
+```mermaid
+flowchart LR
+    classDef default fill:#64748B1F,stroke:#64748B,stroke-width:1.5px;
+    classDef c1 fill:#2563EB24,stroke:#3B82F6,stroke-width:2px;
+    classDef c2 fill:#7C3AED24,stroke:#8B5CF6,stroke-width:1.5px;
+    classDef c3 fill:#05966924,stroke:#10B981,stroke-width:1.5px;
+    classDef c4 fill:#D9770624,stroke:#F59E0B,stroke-width:1.5px;
+    classDef c5 fill:#DC262624,stroke:#EF4444,stroke-width:2px;
+    cu["Customer"] -->|"orders"| co["Counter screen"]
+    cu -->|"pays"| cr["Card reader"]
+    co -->|"sends order"| ba["Barista screen"]
+    ba -->|"calls name at pickup"| cu
+    class cu c3
+    class co c1
+    class cr c4
+    class ba c2
 ```
 
 | Component      | Job                                   |

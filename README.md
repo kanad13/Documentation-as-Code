@@ -64,7 +64,7 @@ flowchart LR
   - Follow a [demo project](demo/README.md) and ask it about a fictional company's documentation.
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/kanad13/Documentation-as-Code.git
 ```
 
 **Diagram: A reader moves from the summary to the full argument and then to the demo**

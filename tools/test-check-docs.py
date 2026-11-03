@@ -65,6 +65,15 @@ class LinkChecks(unittest.TestCase):
         code, _ = run_checker({"a.md": f"{FENCE}text\n[gone](gone.md)\n{FENCE}\n"})
         self.assertEqual(code, 0)
 
+    def test_missing_image_fails(self):
+        code, output = run_checker({"a.md": "![alt](images/gone.png)"})
+        self.assertEqual(code, 1)
+        self.assertIn("broken link -> images/gone.png", output)
+
+    def test_existing_image_passes(self):
+        code, _ = run_checker({"a.md": "![alt](images/x.png)", "images/x.png": "png"})
+        self.assertEqual(code, 0)
+
     def test_web_and_anchor_links_are_ignored(self):
         code, _ = run_checker({"a.md": "[x](https://example.com) [y](#top)"})
         self.assertEqual(code, 0)

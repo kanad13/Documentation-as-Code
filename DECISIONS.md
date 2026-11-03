@@ -13,18 +13,6 @@
 - **Revisit when:**
   - The audience reacts to the term.
 
-## 2026-11-03 — Diagrams live only as text
-
-- **Context:**
-  - The argument is that pictures decay.
-  - Committed images would contradict it and drift from their source.
-- **Chosen:**
-  - Mermaid and D2 blocks in Markdown.
-- **Alternatives:**
-  - Commit rendered SVGs next to sources. Rejected for drift risk and repository bloat.
-- **Revisit when:**
-  - A platform used for reading cannot render D2 blocks natively.
-
 ## 2026-11-03 — Mermaid for most diagrams, D2 for two
 
 - **Context:**
@@ -181,6 +169,8 @@
   - Edit an existing project into a lightweight one. Rejected because the existing ones are built to show scale.
 - **Revisit when:**
   - A small model fails on the coffee example, or presenters prefer a different story.
+- **Update:**
+  - The D2 diagram was later replaced by a second Mermaid diagram. See "Demo 040 uses only Mermaid".
 
 ## 2026-11-03 — Each demo gives the AI only a project folder
 
@@ -213,3 +203,31 @@
   - `TESTING.md` maps each kind of change to its check, and lists what no check covers.
 - **Revisit when:**
   - The repository gains automated checks for the diagram structure rules.
+
+## 2026-11-03 — Demo 040 uses only Mermaid
+
+- **Context:**
+  - GitHub and most editors render Mermaid but not D2, so a D2 diagram forced presenters of the shortest demo to have a renderer.
+  - A second syntax also adds a second way for a small model to fail.
+- **Chosen:**
+  - Both diagrams in `040-lightweight-coffee-orders` are Mermaid flowcharts, marked with the same green `changed` class.
+  - D2 stays in demos 010 to 030, where the architecture is large enough to justify it.
+- **Alternatives:**
+  - Keep one D2 diagram so every demo shows both tools. Rejected because the other three already do.
+- **Revisit when:**
+  - Presenters want to show D2 in a short slot.
+
+## 2026-11-03 — One rendered D2 image in the crash course
+
+- **Context:**
+  - The crash course says a diagram is a recipe, but a six-line Mermaid example does not show how much a recipe can draw.
+  - The repository already commits images as props, so an image is not new, but it must not become the source.
+- **Chosen:**
+  - Slide 9 shows a PNG rendered from the 89-line D2 block in the 010 architecture page, and links to that page for the text.
+  - The image lives in `education/images/`, and `tools/check-docs.py` now fails when an image link points to a missing file.
+  - The "Diagrams live only as text" decision is withdrawn. The rule that remains is that every diagram has a text recipe, and an image is an optional rendered copy.
+- **Alternatives:**
+  - Embed the D2 block with no image. Rejected because GitHub does not render D2, so readers would see code.
+  - Draw a new D2 diagram for the slide. Rejected because the 010 diagram is real and already verified.
+- **Revisit when:**
+  - The 010 architecture changes. Re-render the image from its block.

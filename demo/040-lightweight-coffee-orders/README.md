@@ -1,6 +1,6 @@
 # Lightweight Coffee Orders
 
-Two short documents, one Mermaid diagram and one D2 diagram. Executives ask questions about them, then one sentence adds mobile pre-orders, and the new boxes appear outlined in green, so the audience sees what changed without reading a diagram.
+Two short documents and two small Mermaid diagrams. Executives ask questions about them, then one sentence adds mobile pre-orders, and the new boxes appear outlined in green, so the audience sees what changed without reading a diagram.
 
 **Length:** About 6 minutes. **Use it for:** A very short slot, a first demo for a new audience, or a second demo after the [crash course](../../education/005-crash-course.md). It is also the safest demo when you present with a small or fast AI model, because the diagrams are tiny.
 
